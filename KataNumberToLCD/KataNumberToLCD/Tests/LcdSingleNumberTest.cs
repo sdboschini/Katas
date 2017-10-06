@@ -10,7 +10,7 @@ namespace KataNumberToLCD.Tests
         [SetUp]
         public void Init()
         {
-            _sut = new LcdDigit(new SingleNumberRowsFactory());
+            _sut = new LcdDigit(new DigitRowsFactory());
         }
 
         [TestCase("0", " _ ", "| |", "|_|")]
@@ -25,7 +25,7 @@ namespace KataNumberToLCD.Tests
         [TestCase("9", " _ ", "|_|", " _|")]
         public void GetLcdSingleNumber_HappyPath(string number, string topRow, string centerRow, string bottomRow)
         {
-            var lcdSingleNumber = _sut.GetLcdSingleNumber(number);
+            var lcdSingleNumber = _sut.GetLcdDigit(number);
             Assert.AreEqual(lcdSingleNumber.TopRow, topRow);
             Assert.AreEqual(lcdSingleNumber.CentralRow,  centerRow);
             Assert.AreEqual(lcdSingleNumber.BottomRow, bottomRow);
@@ -36,7 +36,7 @@ namespace KataNumberToLCD.Tests
         [TestCase(",")]
         public void GetSingleNumber_InputIsNotANumber_ReturnDefaultEmptyValue(string character)
         {
-            var lcdSingleNumber = _sut.GetLcdSingleNumber(character);
+            var lcdSingleNumber = _sut.GetLcdDigit(character);
             Assert.AreEqual(lcdSingleNumber.TopRow, "   ");
             Assert.AreEqual(lcdSingleNumber.CentralRow, "   ");
             Assert.AreEqual(lcdSingleNumber.BottomRow, "   ");

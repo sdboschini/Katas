@@ -12,7 +12,7 @@ namespace KataNumberToLCD
         {
             var number = "";
             var validator = new NumberValidator();
-            var lcdNumber = new LcdNumber(new LcdDigit(new SingleNumberRowsFactory())); // dependence injection - utilizzare le interfacce (contiene solo i metodi pubblici)
+            var lcdNumber = new LcdNumber(new LcdDigit(new DigitRowsFactory()), new LcdNumberRows()); // dependence injection - utilizzare le interfacce (contengono solo i metodi pubblici)
             while (number != null && number.ToString().ToUpper() != "E")
             { 
                 Console.Write("Scrivi un numero [E=Exit]: ");

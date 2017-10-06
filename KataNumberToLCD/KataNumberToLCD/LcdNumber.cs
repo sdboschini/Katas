@@ -5,10 +5,12 @@ namespace KataNumberToLCD
     public class LcdNumber
     {
         private readonly LcdDigit _lcdDigit;
+        private readonly LcdNumberRows _lcdNumberRows;
 
-        public LcdNumber(LcdDigit lcdDigit) // ctor + tab
+        public LcdNumber(LcdDigit lcdDigit, LcdNumberRows lcdNumberRows) // ctor + tab crea in automatico il costruttore
         {
-            _lcdDigit = lcdDigit; // se non voglio passare LcdSingleNumber devo usare il new... questo però non permette di effettuare i test
+            _lcdDigit = lcdDigit; // se non voglio passare LcdDigit devo usare il new... questo però non permette di effettuare i test
+            _lcdNumberRows = lcdNumberRows;
         }
 
         public LcdNumberRows GetLcdNumber(string number)
@@ -16,10 +18,8 @@ namespace KataNumberToLCD
             LcdNumberRows lcdNumberRows = new LcdNumberRows();
             foreach (char digit in number)
             {
-                var lcdSingleNumber = _lcdDigit.GetLcdSingleNumber(digit.ToString()); // SingleNumber... meglio usare digit
-                lcdNumberRows.TopRow = string.Concat(lcdNumberRows.TopRow, lcdSingleNumber.TopRow); // la concatenazione meglio farla con un metodo all'interno della classe LcdNumberRows
-                lcdNumberRows.CentralRow = string.Concat(lcdNumberRows.CentralRow, lcdSingleNumber.CentralRow);
-                lcdNumberRows.BottomRow = string.Concat(lcdNumberRows.BottomRow, lcdSingleNumber.BottomRow);
+                var lcdDigit = _lcdDigit.GetLcdDigit(digit.ToString());
+                _lcdNumberRows.ConcatDigit(lcdNumberRows, lcdDigit);
             }
             return lcdNumberRows;
         }

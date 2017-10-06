@@ -1,6 +1,6 @@
 namespace KataNumberToLCD
 {
-    public class SingleNumberRowsFactory : ISingleNumberRowsFactory
+    public class DigitRowsFactory : IDigitRowsFactory
     {
         public LcdNumberRows Create(string topRow, string centralRow, string bottomRow)
         {
