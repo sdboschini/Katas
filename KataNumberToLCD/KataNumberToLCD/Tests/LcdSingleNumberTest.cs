@@ -5,12 +5,12 @@ namespace KataNumberToLCD.Tests
     [TestFixture]
     public class LcdSingleNumberTest
     {
-        private LcdSingleNumber _sut;
+        private LcdDigit _sut;
 
         [SetUp]
         public void Init()
         {
-            _sut = new LcdSingleNumber(new SingleNumberRowsFactory());
+            _sut = new LcdDigit(new SingleNumberRowsFactory());
         }
 
         [TestCase("0", " _ ", "| |", "|_|")]

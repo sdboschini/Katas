@@ -4,10 +4,12 @@ namespace KataNumberToLCD
     {
         public LcdNumberRows Create(string topRow, string centralRow, string bottomRow)
         {
-            LcdNumberRows lcdNumberRows = new LcdNumberRows();
-            lcdNumberRows.TopRow = topRow;
-            lcdNumberRows.CentralRow = centralRow;
-            lcdNumberRows.BottomRow = bottomRow;
+            LcdNumberRows lcdNumberRows = new LcdNumberRows
+            {
+                TopRow = topRow,
+                CentralRow = centralRow,
+                BottomRow = bottomRow
+            };
             return lcdNumberRows;
         }
     }

@@ -3,9 +3,9 @@ using System.Runtime.InteropServices;
 
 namespace KataNumberToLCD
 {
-    public class LcdSingleNumber
+    public class LcdDigit
     {
-        private readonly SingleNumberRowsFactory _singleNumberRowsFactory;
+        private readonly ISingleNumberRowsFactory _singleNumberRowsFactory;
         private const string _NNN = "   ";
         private const string _NUN = " _ ";
         private const string _PNP = "| |";
@@ -14,7 +14,7 @@ namespace KataNumberToLCD
         private const string _NUP = " _|";
         private const string _PUN = "|_ ";
 
-        public LcdSingleNumber(SingleNumberRowsFactory singleNumberRowsFactory)
+        public LcdDigit(ISingleNumberRowsFactory singleNumberRowsFactory)
         {
             _singleNumberRowsFactory = singleNumberRowsFactory;
         }

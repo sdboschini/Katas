@@ -45,10 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISingleNumberRowsFactory.cs" />
+    <Compile Include="Factories\ISingleNumberRowsFactory.cs" />
     <Compile Include="LcdNumber.cs" />
     <Compile Include="LcdNumberRows.cs" />
-    <Compile Include="LcdSingleNumber.cs" />
+    <Compile Include="LcdDigit.cs" />
     <Compile Include="NumberValidator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,7 +10,7 @@ namespace KataNumberToLCD.Tests
         [SetUp]
         public void Init()
         {
-            _sut = new LcdNumber(new LcdSingleNumber(new SingleNumberRowsFactory()));
+            _sut = new LcdNumber(new LcdDigit(new SingleNumberRowsFactory()));
         }
         
         [Test]
