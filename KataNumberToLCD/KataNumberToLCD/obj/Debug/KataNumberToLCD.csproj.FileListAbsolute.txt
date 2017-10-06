@@ -1,0 +1,9 @@
+C:\gitsb\Katas\KataNumberToLCD\KataNumberToLCD\bin\Debug\KataNumberToLCD.exe.config
+C:\gitsb\Katas\KataNumberToLCD\KataNumberToLCD\bin\Debug\KataNumberToLCD.exe
+C:\gitsb\Katas\KataNumberToLCD\KataNumberToLCD\bin\Debug\KataNumberToLCD.pdb
+C:\gitsb\Katas\KataNumberToLCD\KataNumberToLCD\obj\Debug\KataNumberToLCD.csprojResolveAssemblyReference.cache
+C:\gitsb\Katas\KataNumberToLCD\KataNumberToLCD\obj\Debug\KataNumberToLCD.csproj.CoreCompileInputs.cache
+C:\gitsb\Katas\KataNumberToLCD\KataNumberToLCD\obj\Debug\KataNumberToLCD.exe
+C:\gitsb\Katas\KataNumberToLCD\KataNumberToLCD\obj\Debug\KataNumberToLCD.pdb
+C:\gitsb\Katas\KataNumberToLCD\KataNumberToLCD\bin\Debug\nunit.framework.dll
+C:\gitsb\Katas\KataNumberToLCD\KataNumberToLCD\bin\Debug\nunit.framework.xml
